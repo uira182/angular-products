@@ -1,0 +1,7 @@
+{
+  "name": "moduleApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
