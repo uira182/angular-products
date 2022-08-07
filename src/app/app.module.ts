@@ -16,9 +16,12 @@ import { NavComponent } from './components/template/nav/nav.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSnackBar, matSnackBarAnimations, MatSnackBarModule } from '@angular/material/snack-bar';
 import { ProductCrudComponent } from './views/product-crud/product-crud.component';
 import { HomeComponent } from './views/home/home.component';
 import { RedDirective } from './directives/red.directive';
+import { ForDirective } from './directives/for.directive';
 
 @NgModule({
   declarations:[
@@ -28,7 +31,8 @@ import { RedDirective } from './directives/red.directive';
     NavComponent,
     HomeComponent,
     ProductCrudComponent,
-    RedDirective],
+    RedDirective,
+    ForDirective],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
@@ -37,7 +41,9 @@ import { RedDirective } from './directives/red.directive';
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
-    MatCardModule],
+    MatCardModule,
+    MatButtonModule,
+    MatSnackBarModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
