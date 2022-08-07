@@ -23,6 +23,8 @@ import { HomeComponent } from './views/home/home.component';
 import { RedDirective } from './directives/red.directive';
 import { ForDirective } from './directives/for.directive';
 
+import {HttpClientModule} from '@angular/common/http';
+
 @NgModule({
   declarations:[
     AppComponent,
@@ -43,7 +45,8 @@ import { ForDirective } from './directives/for.directive';
     MatListModule,
     MatCardModule,
     MatButtonModule,
-    MatSnackBarModule],
+    MatSnackBarModule,
+    HttpClientModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
