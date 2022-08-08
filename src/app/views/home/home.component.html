@@ -1,12 +1,17 @@
-<mat-card class="home mat-elevation-z3">
-  <mat-card-title class="title">
-    Bem Vindo!
-  </mat-card-title>
-  <mat-card-subtitle class="subtitle">
-    Sistema para Exemplificar a construção de um cadastro em angular.
-  </mat-card-subtitle>
+<ion-card>
+  <ion-card-header>
+    <ion-toolbar>
+      <ion-card-title>Home</ion-card-title>
+      <ion-card-subtitle>Sistema de cadastro de Produtos</ion-card-subtitle>
+    </ion-toolbar>
+  </ion-card-header>
+  <ion-card-content>
+    <p>
+      Sistema para Exemplificar a construção de um cadastro em angular.
+    </p>
 
-  <ul>
-    <li *myFor="let n em [1, 2, 3]">{{ n }}</li>
-  </ul>
-</mat-card>
+    <ul>
+      <li *myFor="let n em [1, 2, 3]">{{ n }}</li>
+    </ul>
+  </ion-card-content>
+</ion-card>

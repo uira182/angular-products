@@ -1,7 +1,13 @@
-<h1>a</h1>
-<button mat-raised-button (click)="navigateToProductCreate()" color="primary">
-  Novo Produto
-</button>
-
-<app-product-read></app-product-read>
-<app-product-read2></app-product-read2>
+<ion-card>
+  <ion-card-header>
+    <ion-toolbar>
+      <ion-button (click)="navigateToProductCreate()" slot="end" size="small" color="primary" shape="round">+</ion-button>
+      <ion-card-title>Lista de Produtos</ion-card-title>
+      <ion-card-subtitle>Todos os produtos registrados no banco de dados JSON</ion-card-subtitle>
+    </ion-toolbar>
+  </ion-card-header>
+  <ion-card-content>
+    <app-product-read></app-product-read>
+    <app-product-read2></app-product-read2>
+  </ion-card-content>
+</ion-card>
