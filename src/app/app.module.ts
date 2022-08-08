@@ -21,7 +21,6 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { HeaderComponent } from './components/template/header/header.component';
 import { FooterComponent } from './components/template/footer/footer.component';
 import { NavComponent } from './components/template/nav/nav.component';
-import { ProductCrudComponent } from './views/product-crud/product-crud.component';
 import { HomeComponent } from './views/home/home.component';
 import { RedDirective } from './directives/red.directive';
 import { ForDirective } from './directives/for.directive';
@@ -29,6 +28,12 @@ import { ForDirective } from './directives/for.directive';
 import {HttpClientModule} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ProductCreateComponent } from './components/product/product-create/product-create.component';
+import { ProductReadComponent } from './components/product/product-read/product-read.component';
+import { ProductCrudComponent } from './views/product-crud/product-crud.component';
+import { ProductRead2Component } from './components/product/product-read2/product-read2.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations:[
@@ -38,9 +43,11 @@ import { ProductCreateComponent } from './components/product/product-create/prod
     NavComponent,
     HomeComponent,
     ProductCrudComponent,
+    ProductReadComponent,
     ProductCreateComponent,
     RedDirective,
-    ForDirective],
+    ForDirective,
+    ProductRead2Component],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
@@ -55,7 +62,10 @@ import { ProductCreateComponent } from './components/product/product-create/prod
     HttpClientModule,
     FormsModule,
     MatFormFieldModule,
-    MatInputModule],
+    MatInputModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
