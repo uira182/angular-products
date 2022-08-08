@@ -30,13 +30,13 @@ import { FormsModule } from '@angular/forms';
 import { ProductCreateComponent } from './components/product/product-create/product-create.component';
 import { ProductReadComponent } from './components/product/product-read/product-read.component';
 import { ProductCrudComponent } from './views/product-crud/product-crud.component';
-import { ProductRead2Component } from './components/product/product-read2/product-read2.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 
 import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
+import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
 
 registerLocaleData(localePt);
 
@@ -52,7 +52,7 @@ registerLocaleData(localePt);
     RedDirective,
     ForDirective,
     ProductReadComponent,
-    ProductRead2Component],
+    ProductUpdateComponent],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
