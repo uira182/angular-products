@@ -43,10 +43,10 @@ import { MatSortModule } from '@angular/material/sort';
     NavComponent,
     HomeComponent,
     ProductCrudComponent,
-    ProductReadComponent,
     ProductCreateComponent,
     RedDirective,
     ForDirective,
+    ProductReadComponent,
     ProductRead2Component],
   imports: [
     BrowserModule,

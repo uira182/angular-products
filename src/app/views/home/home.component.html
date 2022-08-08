@@ -10,8 +10,12 @@
       Sistema para Exemplificar a construção de um cadastro em angular.
     </p>
 
-    <ul>
-      <li *myFor="let n em [1, 2, 3]">{{ n }}</li>
-    </ul>
+    <ion-list>
+      <ion-item *myFor="let n em [1, 2, 3]">
+        <ion-label>
+          {{ n }}
+        </ion-label>
+      </ion-item>
+    </ion-list>
   </ion-card-content>
 </ion-card>
