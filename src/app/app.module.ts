@@ -1,4 +1,4 @@
-import { NgModule, Input } from '@angular/core';
+import { NgModule, Input, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 
@@ -35,6 +35,11 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 
+import localePt from '@angular/common/locales/pt';
+import { registerLocaleData } from '@angular/common';
+
+registerLocaleData(localePt);
+
 @NgModule({
   declarations:[
     AppComponent,
@@ -66,7 +71,7 @@ import { MatSortModule } from '@angular/material/sort';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [{ provide: [RouteReuseStrategy, LOCALE_ID], useClass: IonicRouteStrategy, useValue: 'pt-BR' }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
